@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "AulaVirtualCursos";
+    Layout = "~/Views/Shared/_Layout_Aula.cshtml";
+}
+
+<div class="container-fluid">
+    <h1 class="mt-4">Cursos</h1>
+    <div class="container-fluid">
+
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+
+            </div>
+        </div>
+        @foreach (var oElemento in Model) { 
+            <section>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="media">
+
+                            <div class="media-body">
+                                <table class="table">
+                                    <tr>
+
+                                        <th>""</th>
+                                        <th>E_MAIL_P</th>
+                                        <th>Nombre del Curso</th>
+
+                                    </tr>
+
+                                    
+                                    <tr>
+                                        <td><img src="~/img/libro.png" class="mr-3" alt="..."></td>
+                                        <td>@oElemento.E_MAIL_P</td>
+                                        <td>@oElemento.Nombre</td>
+
+
+                                    </tr>
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        }
+
+    </div>
+</div>
+

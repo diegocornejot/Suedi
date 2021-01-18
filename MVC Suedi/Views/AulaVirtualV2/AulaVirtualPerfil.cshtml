@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "AulaVirtualPerfil";
+    Layout = "~/Views/Shared/_Layout_Aula.cshtml";
+}
+@foreach (var oElemento in Model)
+{
+    <div class="container-fluid">
+
+        <h1 class="mt-4">Perfil</h1>
+        <div class="container-fluid">
+            <div align="center">
+                <img src="img/foto.png" height="130" />
+            </div>
+            <div>
+                <h1>
+                    &nbsp; Configuracion de Usuario
+                </h1>
+
+
+
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+
+                        <label for=>Nombres</label>
+                        <label>@oElemento.Nombres</label>
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label>Apellidos</label>
+                        <label>@oElemento.Apellidos</label>
+                    </div>
+                </div>
+                <div>
+                    <label>Fecha</label>
+                    <label>@oElemento.Fecha_Nac</label>
+                </div>
+                <div>
+                    <label>Telefono</label>
+                    <label>@oElemento.Telefono</label>
+                </div>
+                <div>
+                    <label>Calificacion</label>
+                    <label>@oElemento.Calificacion</label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,90 @@
+﻿@model MVC_Suedi.Models.newModels.SuediRegistrar
+
+@{
+    ViewBag.Title = "Nuevo";
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Login&Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,
+        600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="@Url.Content("~/assets/css/styles.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <main>
+
+        <div class="all_container">
+            <div class="box_back">
+                <div class="box_back-login">
+                    <h3>¡Redistrate ahora!</h3>
+                    <p> Registrate, nunca es tarde para aprender </p>
+                    <button id="Btn_register"> Registrarse </button>
+                </div>
+                <div class="box_back-register">
+                    <h3>¿Tienes una cuenta?</h3>
+                    <p> Inicia sesión para poder entrar a nuestros cursos </p>
+                    <button id="Btn_login" onclick="window.location.href='/Login/Login'"> Iniciar sesion </button>
+                    
+                </div>
+            </div>
+            <!--Formulario Login & Register-->
+            <div class="container_login-register">
+                <!--Login-->
+
+
+                <!--Register-->
+                @using (Html.BeginForm("Nuevo", "Suedi", FormMethod.Post))
+                {
+            <div action="" class="form_login">
+                <h2> ¡Regístrate! </h2>
+                <div>
+                    @Html.LabelFor(d => d.E_MAIL_A)
+                    @Html.TextBoxFor(d => d.E_MAIL_A, "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(d => d.E_MAIL_A, null, new { @class="red"})
+                </div>
+                <div>
+                    @Html.LabelFor(d => d.Contraseña)
+                    @Html.TextBoxFor(d => d.Contraseña, "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(d => d.Contraseña, null, new { @class = "red" })
+                </div>
+                <div>
+                    @Html.LabelFor(d => d.Nombres)
+                    @Html.TextBoxFor(d => d.Nombres, "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(d => d.Nombres, null, new { @class = "red" })
+                </div>
+                <div>
+                    @Html.LabelFor(d => d.Apellidos)
+                    @Html.TextBoxFor(d => d.Apellidos, "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(d => d.Apellidos, null, new { @class = "red" })
+                </div>
+                <div>
+                    @Html.LabelFor(d => d.Fecha_Nac)
+                    @Html.EditorFor(d => d.Fecha_Nac, "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(d => d.Fecha_Nac, null, new { @class = "red" })
+                </div>
+                <div>
+                    @Html.LabelFor(d => d.Telefono)
+                    @Html.TextBoxFor(d => d.Telefono, "", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(d => d.Telefono, null, new { @class = "red" })
+                </div>
+                
+                
+               
+                <input type="submit" value="Guardar" />
+            </div>
+                }
+            </div>
+        </div>
+    </main>
+
+
+</body>
+</html>
+
+
+

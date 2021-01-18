@@ -1,0 +1,38 @@
+﻿@model MVC_Suedi.Models.newModels.ModeloCursos
+@{
+    ViewBag.Title = "IngresarCurso";
+    Layout = "~/Views/Shared/_Layout_Aula.cshtml";
+}
+
+<h2>IngresarCurso</h2>
+<div class="container-fluid">
+    @using (Html.BeginForm("IngresarCurso", "AulaProfesor", FormMethod.Post))
+    {
+        <div action="" class="form_login">
+            <h2> ¡Regístrata un curso! </h2>
+            
+            <div>
+                @Html.LabelFor(d => d.ID_Curso)
+                @Html.TextBoxFor(d => d.ID_Curso, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.ID_Curso, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Nombre)
+                @Html.TextBoxFor(d => d.Nombre, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Nombre, null, new { @class = "red" })
+            </div>
+            <div>
+                @Html.LabelFor(d => d.Tipo_Categoria)
+                @Html.TextBoxFor(d => d.Tipo_Categoria, "", new { @class = "form-control" })
+                @Html.ValidationMessageFor(d => d.Tipo_Categoria, null, new { @class = "red" })
+            </div>
+            
+
+
+
+
+            <input type="submit" value="Guardar" />
+        </div>
+    }
+</div>
+

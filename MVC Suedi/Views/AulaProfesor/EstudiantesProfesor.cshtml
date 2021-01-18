@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "EstudiantesProfesor";
+    Layout = "~/Views/Shared/_Layout_Aula.cshtml";
+}
+
+<h2>EstudiantesProfesor</h2>
+<div class="container-fluid">
+    <h1 class="mt-4">Cursos</h1>
+    <div class="container-fluid">
+
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+
+            </div>
+        </div>
+        @foreach (var oElemento in Model)
+        {
+            <section>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="media">
+
+                            <div class="media-body">
+                                <table class="table">
+                                    <tr>
+
+                                        <th></th>
+                                        <th>Correo</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Telefono</th>
+                                        <th>Curso</th>
+
+                                    </tr>
+
+
+                                    <tr>
+                                        <td><img src="~/img/libro.png" class="mr-3" alt="..."></td>
+                                        <td>@oElemento.E_MAIL_A</td>
+                                        <td>@oElemento.Nombres</td>
+                                        <td>@oElemento.Apellidos</td>
+                                        <td>@oElemento.Telefono</td>
+                                        <td>@oElemento.NombreCurso</td>
+
+
+
+
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        }
+
+    </div>
+</div>
+

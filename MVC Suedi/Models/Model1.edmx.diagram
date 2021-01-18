@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="85c133acdd1f42ce85a9e2bcfb57ba7f" Name="Diagram1">
+        <EntityTypeShape EntityType="SuediModel.Alumno" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuediModel.Curso" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuediModel.Profesor" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuediModel.Selecciona" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="SuediModel.FK__Seleccion__E_Mai__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="SuediModel.FK__Curso__E_Mail_P__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="SuediModel.FK__Seleccion__ID_Cu__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="SuediModel.FK__Seleccion__E_Mai__3A81B327" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

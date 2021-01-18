@@ -1,0 +1,37 @@
+﻿@model List<MVC_Suedi.Models.newModels.ModeloCursos>
+@{
+    ViewBag.Title = "Ingles";
+}
+
+
+            <main id="main">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table">
+                            <tr>
+
+                                <th>Nombre</th>
+                                <th>E_MAIL_P</th>
+                                <th>Apellidos</th>
+                                <th>Telefono</th>
+
+                            </tr>
+                            @foreach (var oElemento in Model)
+                            {
+                        <tr>
+                            <td>@oElemento.E_MAIL_P</td>
+                            <td>@oElemento.Nombre</td>
+                            <td>@oElemento.Estado</td>
+                            <td>
+                                <a href="~/Algebra/Matricular/@oElemento.ID_Curso">matricular</a>
+                            </td>
+                        </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+            </main>
+
+            
+
+

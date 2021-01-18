@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SpaceY - Inicio</title>
+
+
+    <link rel="stylesheet" href="@Url.Content("~/css/styles.css")">
+    <link rel="stylesheet" href="@Url.Content("~/css/responsive-design.css")">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header id="header">
+                <div class="img-header">
+                    <div id="particles-js">
+                    </div>
+                    <div class="header-info">
+                        <h2>Suedi</h2>
+                        <hr>
+                        <p>Aprendizaje al alcance de tus manos</p>
+                    </div>
+                </div>
+
+                <!-- Navegation Menu -->
+
+                <nav class="menu">
+                    <div class="log-box">
+                        <h1>Suedi</h1>
+                        <span class="btn-menu"><i class="fas fa-bars"></i></span>
+                    </div>
+
+                    <div class="list-container">
+                        <ul class="lists">
+                            @if (Session["User"] != null)
+                            {
+
+
+                                <li><a href="~/AulaVirtualV2/AulaVirtual">Aula</a></li>
+
+
+                            }
+                            <li><a href="~/Inicio/Inicio" class="active">Inicio</a></li>
+
+                            <li><a href="~/CursosInicio/CursosInicio">Cursos</a></li>
+                            <li><a href="#">Sobre Nosotros</a></li>
+
+                            <li><a href="#">@Session["User"]</a></li>
+                            @if (Session["User"] == null)
+                            {
+                                <li><a href="/ProfeOAlum/Elegir">Iniciar sesion</a></li>
+                            }
+                            else
+                            {
+                                <li><a>@Html.ActionLink("Cerrar Sesion", "Cerrar","Cerrar")</a></li>
+                            }
+                            
+
+                        </ul>
+
+                    </div>
+                </nav>
+
+            </header>
+
+            <main id="main">
+                @RenderBody()
+            </main>
+
+
+
+            <div class="go-top">
+                <span><i class="fas fa-chevron-up"></i></span>
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p>&copy; Suedi - Todos los derechos reservados - 2020</p>
+            </footer>
+
+            <!-- Scripts -->
+            <script src="https://kit.fontawesome.com/35db202371.js" crossorigin="anonymous"></script>
+            <script src="@Url.Content("~/js/particles.js")" rel="stylesheet" type="text/javascript"></script>
+            <script src="@Url.Content("~/js/particles-lib.js")" rel="stylesheet" type="text/javascript"></script>
+            <script src="@Url.Content("~/js/app.js")" rel="stylesheet" type="text/javascript"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

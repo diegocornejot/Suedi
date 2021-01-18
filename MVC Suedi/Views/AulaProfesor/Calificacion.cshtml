@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Calificacion";
+    Layout = "~/Views/Shared/_Layout_Aula.cshtml";
+}
+
+@foreach (var oElemento in Model)
+{
+    if (oElemento.Calificacion == 0)
+    {
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+    }
+    else if (oElemento.Calificacion == 1)
+    {
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+    }
+    else if (oElemento.Calificacion == 2)
+    {
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+    }
+    else if (oElemento.Calificacion == 3)
+    {
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+    }
+    else if (oElemento.Calificacion == 4)
+    {
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+    }
+    else
+    {
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+    }
+}
+
